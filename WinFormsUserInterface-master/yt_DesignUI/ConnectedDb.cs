@@ -8,7 +8,10 @@ namespace yt_DesignUI
 {
     class ConnectedDb 
     {
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source = DESKTOP-75U10U6\MSSQLSERVER1;Initial Catalog=NoteBd;Integrated Security = true");
+
+        // подключаем базу данных
+
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source = ------------- ;Initial Catalog=NoteBd;Integrated Security = true");
 
         public void openConnection()
         {
