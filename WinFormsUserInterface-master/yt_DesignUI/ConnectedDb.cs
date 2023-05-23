@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+
+namespace yt_DesignUI
+{
+    class ConnectedDb 
+    {
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source = DESKTOP-75U10U6\MSSQLSERVER1;Initial Catalog=NoteBd;Integrated Security = true");
+
+        public void openConnection()
+        {
+            if (sqlConnection.State == System.Data.ConnectionState.Closed)
+            {
+                sqlConnection.Open();
+            }
+
+        }
+        public void closeConnection()
+        {
+            if (sqlConnection.State == System.Data.ConnectionState.Open)
+            {
+                sqlConnection.Close();
+            }
+
+        }
+        public SqlConnection getConnection()
+        {
+            return sqlConnection;
+        }
+    }
+}
