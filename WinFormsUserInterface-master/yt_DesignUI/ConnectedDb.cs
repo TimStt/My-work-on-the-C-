@@ -11,7 +11,7 @@ namespace yt_DesignUI
 
         // подключаем базу данных
 
-        SqlConnection sqlConnection = new SqlConnection(@"Data Source = ------------- ;Initial Catalog=NoteBd;Integrated Security = true");
+        SqlConnection sqlConnection = new SqlConnection(@"Data Source = DESKTOP-75U10U6\MSSQLSERVER1;Initial Catalog=NoteBd;Integrated Security = true");
 
         public void openConnection()
         {
